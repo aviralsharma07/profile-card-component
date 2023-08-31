@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 18px;
+}
+
+body {
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: bottom 400px right 150px, top 400px left 150px;
+  background-color: hsl(185, 75%, 39%);
+}
+
+.card {
+  width: 90%;
+  height: 58%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: white;
+}
+
+.card-header-image {
+  width: 100%;
+  height: 40%;
+  /* position: relative; */
+  background: url(./images/bg-pattern-card.svg) no-repeat center center/cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.profile-image {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  border: 5px solid white;
+  z-index: 2;
+  position: absolute;
+  top: calc(40% - 3.5rem);
+  left: calc(50% - 3.5rem);
+  background-color: white;
+  background: url(./images/image-victor.jpg) no-repeat center center/cover;
+}
+
+.card-description {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  /* background: lightcoral; */
+  justify-content: flex-start;
+}
+
+.profile-description {
+  margin-top: 5rem;
+  /* padding: 4.5rem; */
+  /* background: #000; */
+  text-align: center;
+  line-height: 1.5;
+  /* color: hsl(229, 23%, 23%); */
+}
+
+.profile-description h1 span {
+  color: hsl(227, 10%, 46%);
+  font-weight: 400;
+}
+
+.profile-description p {
+  color: hsl(227, 10%, 46%);
+}
+
+.profile-stats {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  height: 6rem;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem 2rem;
+  border-top: 0.2px solid hsla(0, 0%, 59%, 0.7);
+  justify-content: space-between;
+  /* background: blue; */
+}
+
+.stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stat-count {
+  color: hsl(229, 23%, 23%);
+  font-weight: 700;
+}
+.stat-title {
+  font-size: 0.7rem;
+  color: hsl(0, 0%, 59%);
+}
+
+@media (max-width: 383px) {
+  .card .card-description .profile-description {
+    margin-top: 4rem;
+  }
+
+  .card .profile-stats {
+    padding: 1rem;
+    height: 5rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .container {
+    background: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 350px right 650px, top 350px left 600px;
+    background-color: hsl(185, 75%, 39%);
+  }
+  .card {
+    max-width: 22rem;
+  }
+
+  .card .card-description .profile-description {
+    margin-top: 4rem;
+  }
+  .profile-stats {
+    height: 5rem;
+    padding: 1rem 2rem;
+  }
+}
